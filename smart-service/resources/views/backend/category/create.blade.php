@@ -158,11 +158,20 @@ s0.parentNode.insertBefore(s1,s0);
               <h5 class="text-white m-b-0">Category Entry</h5>
             </div>
             <div class="card-body">
+              @if($errors->any())
+
+              <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                <div class="alert alert-danger">{{ $error }}</div>
+                @endforeach
+              </div>
+              @endif
+
               <form action="{{route('category.store')}}" method="post" >
                 @csrf
               <div class="form-group">
                 <label for="exampleInputEmail1">Category Name</label>
-                <input type="text" name="cat_name" class="form-control" id="exampleInputEmail1" placeholder="Enter a category name">
+                <input type="text" name="cat_name" value="{{old('cat_name')}}" class="form-control" id="exampleInputEmail1" placeholder="Enter a category name">
               </div>
          
               <button type="submit" class="btn btn-success">Submit</button>
