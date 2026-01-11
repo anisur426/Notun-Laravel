@@ -35,10 +35,12 @@ Route::middleware('auth')->group(function () {
     Route::resource('category', CategoryController::class);
       Route::resource('product',ProductController::class);
 });
+//admin login logout 
+
 Route::middleware('guest:admin')->prefix('admin')->group( function () {
 
     Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'create'])->name('admin.login');
-    //Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'store']);
+  Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'store']);
 
     //Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('admin.register');
    // Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'store']);
@@ -47,10 +49,31 @@ Route::middleware('guest:admin')->prefix('admin')->group( function () {
 
 Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
-    //Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('admin.logout');
+    Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('admin.logout');
 
-    Route::view('/dashboard','admin_login');
+    Route::view('/dashboard','backend.admin_dashboard');
 
 });
+//admin login logout 
+//manager login logout
+Route::middleware('guest:manager')->prefix('manager')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Manager\LoginController::class, 'create'])->name('manager.login');
+  Route::post('login', [App\Http\Controllers\Auth\Manager\LoginController::class, 'store']);
+
+    //Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('admin.register');
+   // Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'store']);
+
+});
+
+Route::middleware('auth:manager')->prefix('manager')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('manger.logout');
+
+    Route::view('/dashboard','backend.manager_dashboard');
+
+});
+//manager login logout
+
 
 require __DIR__ . '/auth.php';
