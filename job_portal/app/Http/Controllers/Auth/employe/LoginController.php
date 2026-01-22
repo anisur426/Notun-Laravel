@@ -14,7 +14,7 @@ class LoginController extends Controller
 {
     public function create(): View
     {
-        return view('admin.auth.login');
+        return view('auth.employe_login');
     }
 
     public function store(Request $request): RedirectResponse
@@ -24,7 +24,7 @@ class LoginController extends Controller
             'password' => ['required', 'string'],
         ]);
 
-        if(! Auth::guard('admin')->attempt($request->only('email', 'password'), $request->boolean('remember')))
+        if(! Auth::guard('employe')->attempt($request->only('email', 'password'), $request->boolean('remember')))
         {
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
@@ -33,17 +33,17 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::ADMIN_DASHBOARD);
+        return redirect()->intended(RouteServiceProvider::EMPLOYE_DASHBOARD);
     }
 
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('admin')->logout();
+        Auth::guard('employe')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/admin/login');
+        return redirect('/employe/login');
     }
 }

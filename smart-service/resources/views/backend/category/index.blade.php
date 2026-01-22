@@ -86,12 +86,12 @@
         <div class="card">
             <div class="card-body">
                 @if (session('success'))
-                
+
                 <div class="alert alert-success">{{session('success')}}</div>
 
                 @endif
 
-                <h4 class="text-black">Category list <span class="pull-right"><a class="btn btn-primary" href="{{url('category/create')}}" >Add Category</a></span></h4>
+                <h4 class="text-black">Category list <span class="pull-right"><a class="btn btn-primary" href="{{url('category/create')}}">Add Category</a></span></h4>
 
                 <div class="table-responsive">
                     <table class="table">
@@ -109,16 +109,16 @@
                                 <form method="post" action="{{route('category.destroy',$cat->id)}}">
                                     @csrf
                                     @method('delete')
-                                     <th scope="row">{{$cat->id}}</th>
-                                <td>{{$cat->name}}</td>
+                                    <th scope="row">{{$cat->id}}</th>
+                                    <td>{{$cat->name}}</td>
 
-                                <td>
-                                    <a href="{{route('category.edit',$cat->id)}}" class="btn btn-primary">Edit</a>
-                                    
-                                    <button type="submit" class="btn btn-danger">Delete</button>
-                                </td>
+                                    <td>
+                                        <a href="{{route('category.edit',$cat->id)}}" class="btn btn-primary">Edit</a>
+
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </td>
                                 </form>
-                               
+
                             </tr>
                             @endforeach
 
