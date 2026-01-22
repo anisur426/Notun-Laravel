@@ -49,6 +49,23 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
     Route::view('/dashboard','backend.admin_dashboard');
 
 });
+Route::middleware('guest:employe')->prefix('employe')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'create'])->name('employe.login');
+    Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'store']);
+
+    Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('employe.register');
+    Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'store']);
+
+});
+
+Route::middleware('auth:employe')->prefix('employe')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('employe.logout');
+
+    Route::view('/dashboard','backend.employe_dashboard');
+
+});
 
 
 
