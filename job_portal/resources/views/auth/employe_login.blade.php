@@ -38,7 +38,7 @@
 <body class="login-page">
 <div class="login-box">
   <div class="login-box-body">
-    <h3 class="login-box-msg">Employe Sign In</h3>
+    <h3 class="login-box-msg">Sign In</h3>
     <form action="{{route('employe.login') }}" method="post">
         @csrf
       <div class="form-group has-feedback">

@@ -39,7 +39,7 @@
 <div class="login-box">
   <div class="login-box-body">
     <h3 class="login-box-msg">Sign In</h3>
-    <form action="{{route('login') }}" method="post">
+    <form action="{{route('login')}}" method="post">
         @csrf
       <div class="form-group has-feedback">
         <input type="email" name="email" class="form-control sty1" placeholder="User">

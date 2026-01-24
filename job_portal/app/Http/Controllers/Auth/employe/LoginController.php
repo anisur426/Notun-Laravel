@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Admin;
+namespace App\Http\Controllers\Auth\Employe;
 
 use Illuminate\View\View;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class LoginController extends Controller
     }
 
     public function store(Request $request): RedirectResponse
-    {
+    { //dd($request);
         $request->validate([
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
             'password' => ['required', 'string'],

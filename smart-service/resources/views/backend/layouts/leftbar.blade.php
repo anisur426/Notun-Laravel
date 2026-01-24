@@ -18,8 +18,8 @@
                  <ul class="treeview-menu">
                      <li><a href="{{url('/product')}}"><i class="fa fa-angle-right"></i>All product</a></li>
                      <li><a href="{{url('/product/create')}}"><i class="fa fa-angle-right"></i>Add product</a></li>
-                     <li><a href="{{ url('/category')}}"><i class="fa fa-angle-right"></i> Category list</a></li>
-                     <li><a href="{{ url('/category/create')}}"><i class="fa fa-angle-right"></i>Add Category</a></li>
+                     <li><a href="{{url('/category')}}"><i class="fa fa-angle-right"></i> Category list</a></li>
+                     <li><a href="{{url('/category/create')}}"><i class="fa fa-angle-right"></i>Add Category</a></li>
                  </ul>
              </li>
 

@@ -78,7 +78,7 @@ return [
     ],
      'employes' => [
         'driver' => 'eloquent',
-        'model' => App\Models\employe::class,
+        'model' => App\Models\Employe::class,
     ],
 
         // 'users' => [
@@ -127,5 +127,6 @@ return [
     */
 
     'password_timeout' => 10800,
+    
 
 ];

@@ -28,9 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
 #######admin login,register,logout#######
-
 
 Route::middleware('guest:admin')->prefix('admin')->group( function () {
 
@@ -51,29 +49,17 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 });
 
 
-##########employe###########
+########## employe ###########
 
-Route::middleware('guest:employe')->prefix('employe')->group( function () {
-
-    Route::get('login', [App\Http\Controllers\Auth\employe\LoginController::class, 'create'])->name('employe.login');
-    Route::post('login', [App\Http\Controllers\Auth\employe\LoginController::class, 'store']);
-
-    Route::get('register', [App\Http\Controllers\Auth\employe\RegisterController::class, 'create'])->name('employe.register');
-    Route::post('register', [App\Http\Controllers\Auth\employe\RegisterController::class, 'store']);
-
+Route::middleware('guest:employe')->prefix('employe')->group(function () {
+    Route::get('login', [App\Http\Controllers\Auth\Employe\LoginController::class, 'create'])->name('employe.login');
+    Route::post('login', [App\Http\Controllers\Auth\Employe\LoginController::class, 'store']);
 });
 
-Route::middleware('auth:employe')->prefix('employe')->group( function () {
-
-    Route::post('logout', [App\Http\Controllers\Auth\employe\LoginController::class, 'destroy'])->name('employe.logout');
-
-    Route::view('/dashboard','backend.employe_dashboard');
-
+Route::middleware('auth:employe')->prefix('employe')->group(function () {
+    Route::post('logout', [App\Http\Controllers\Auth\Employe\LoginController::class, 'destroy'])->name('employe.logout');
+    Route::view('/dashboard','backend.employe_dashboard'); // এখানে /dashboard -> dashboard
 });
-
-
-
-
 
 
 require __DIR__.'/auth.php';
