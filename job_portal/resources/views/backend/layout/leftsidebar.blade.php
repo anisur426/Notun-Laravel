@@ -30,10 +30,10 @@
             <li><a href="apps-contact-details.html"><i class="fa fa-angle-right"></i> Contact Detail</a></li>
           </ul>
         </li>
-        <li class="treeview"> <a href="#"> <i class="ti-email"></i> <span>Inbox</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"> <i class="ti-email"></i> <span>Jobs</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="apps-mailbox.html"><i class="fa fa-angle-right"></i> Mailbox</a></li>
-            <li><a href="apps-mailbox-detail.html"><i class="fa fa-angle-right"></i> Mailbox Detail</a></li>
+            <li><a href="{{url('/jobs')}}"><i class="fa fa-angle-right"></i> All jobs</a></li>
+            <li><a href="{{url('/job/create')}}"><i class="fa fa-angle-right"></i>Create jobs</a></li>
             <li><a href="apps-compose-mail.html"><i class="fa fa-angle-right"></i> Compose Mail</a></li>
           </ul>
         </li>
