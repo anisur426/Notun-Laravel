@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('job', function (Blueprint $table) {
-            $table->smallIncrements('id');
-            $table->string('name', 100);
-             $table->string('description');
-            $table->timestamps();
+          Schema::table('users', function ($table) {
+            $table->string('github_id')->nullable();
         });
     }
 
@@ -24,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('job');
+        //
     }
 };

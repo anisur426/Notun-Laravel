@@ -11,21 +11,21 @@
 <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Biz Admin, Biz Adminadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
 <meta name="author" content="uxliner"/>
 <!-- v4.1.3 -->
-<link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('dist/bootstrap/css/bootstrap.min.css')}}">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('dist/img/favicon-16x16.png')}}">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 <!-- Theme style -->
-<link rel="stylesheet" href="dist/css/style.css">
-<link rel="stylesheet" href="dist/css/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="dist/css/et-line-font/et-line-font.css">
-<link rel="stylesheet" href="dist/css/themify-icons/themify-icons.css">
-<link rel="stylesheet" href="dist/css/simple-lineicon/simple-line-icons.css">
-<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="{{asset('dist/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/font-awesome/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/et-line-font/et-line-font.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/themify-icons/themify-icons.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/simple-lineicon/simple-line-icons.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/skins/_all-skins.min.css')}}">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -155,27 +155,27 @@
             <div class="card-body">
               <h5>Recent Activities <span class="pull-right f-13"><a href="#">View All</a></span></h5>
               <div class="message-widget"> <a href="#">
-                <div class="user-img pull-left"> <img src="dist/img/img1.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
+                <div class="user-img pull-left"> <img src="{{asset('dist/img/img1.jpg')}}" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
                 <div class="mail-contnet">
                   <h5>Florence Douglas</h5>
                   <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
                 </a> <a href="#">
-                <div class="user-img pull-left"> <img src="dist/img/img3.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
+                <div class="user-img pull-left"> <img src="{{asset('dist/img/img3.jpg')}}" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
                 <div class="mail-contnet">
                   <h5>Florence Douglas</h5>
                   <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">10:30 AM</span> </div>
                 </a> <a href="#">
-                <div class="user-img pull-left"> <img src="dist/img/img4.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status offline pull-right"></span> </div>
+                <div class="user-img pull-left"> <img src="{{asset('dist/img/img4.jpg')}}" class="img-circle img-responsive" alt="User Image"> <span class="profile-status offline pull-right"></span> </div>
                 <div class="mail-contnet">
                   <h5>Florence Douglas</h5>
                   <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">12:30 AM</span> </div>
                 </a> <a href="#">
-                <div class="user-img pull-left"> <img src="dist/img/img3.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
+                <div class="user-img pull-left"> <img src="{{asset('dist/img/img3.jpg')}}" class="img-circle img-responsive" alt="User Image"> <span class="profile-status invisable pull-right"></span> </div>
                 <div class="mail-contnet">
                   <h5>Florence Douglas</h5>
                   <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">10:30 AM</span> </div>
                 </a> <a href="#">
-                <div class="user-img pull-left"> <img src="dist/img/img1.jpg" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
+                <div class="user-img pull-left"> <img src="{{asset('dist/img/img1.jpg')}}" class="img-circle img-responsive" alt="User Image"> <span class="profile-status online pull-right"></span> </div>
                 <div class="mail-contnet">
                   <h5>Florence Douglas</h5>
                   <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span> </div>
@@ -192,44 +192,44 @@
                 <div class="direct-chat-messages" style="height:377px;">
                   <div class="direct-chat-msg">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img2.jpg" alt="user image">
+                    <img class="direct-chat-img" src="{{asset('dist/img/img2.jpg')}}" alt="user image">
                     <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
                   </div>
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img3.jpg" alt="user image"> 
+                    <img class="direct-chat-img" src="{{asset('dist/img/img3.jpg')}}" alt="user image"> 
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text"> You better believe it! </div>
                   </div>
                   <div class="direct-chat-msg">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img4.jpg" alt="user image">
+                    <img class="direct-chat-img" src="{{asset('dist/img/img4.jpg')}}" alt="user image">
                     <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
                   </div>
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img5.jpg" alt="user image">
+                    <img class="direct-chat-img" src="{{asset('dist/img/img5.jpg')}}" alt="user image">
                     <div class="direct-chat-text"> I would love to. </div>
                   </div>
                   <div class="direct-chat-msg">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img6.jpg" alt="user image">
+                    <img class="direct-chat-img" src="{{asset('dist/img/img6.jpg')}}" alt="user image">
                     <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
                   </div>
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img3.jpg" alt="user image"> 
+                    <img class="direct-chat-img" src="{{asset('dist/img/img3.jpg')}}" alt="user image"> 
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text"> You better believe it! </div>
                   </div>
                   <div class="direct-chat-msg">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-left">Alexander Pierce</span> <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img6.jpg" alt="user image">
+                    <img class="direct-chat-img" src="{{asset('dist/img/img6.jpg')}}" alt="user image">
                     <div class="direct-chat-text"> A small river named Duden flows by their place and supplies it with the necessary. </div>
                   </div>
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-info clearfix"> <span class="direct-chat-name pull-right">Sarah Bullock</span> <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span> </div>
-                    <img class="direct-chat-img" src="dist/img/img3.jpg" alt="user image"> 
+                    <img class="direct-chat-img" src="{{asset('dist/img/img3.jpg')}}" alt="user image"> 
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text"> You better believe it! </div>
                   </div>
@@ -255,23 +255,23 @@
 
 @endsection
 @section('script')
-<script src="dist/js/jquery.min.js"></script>  
-<script src="dist/bootstrap/js/bootstrap.min.js"></script> 
+<script src="{{asset('dist/js/jquery.min.js')}}"></script>  
+<script src="{{asset('dist/bootstrap/js/bootstrap.min.js')}}"></script> 
 
 <!-- template --> 
-<script src="dist/js/bizadmin.js"></script> 
+<script src="{{asset('dist/js/bizadmin.js')}}"></script> 
 
 <!-- Jquery Sparklines --> 
-<script src="dist/plugins/jquery-sparklines/jquery.sparkline.min.js"></script> 
-<script src="dist/plugins/jquery-sparklines/sparkline-int.js"></script> 
+<script src="{{asset('dist/plugins/jquery-sparklines/jquery.sparkline.min.js')}}"></script> 
+<script src="{{asset('dist/plugins/jquery-sparklines/sparkline-int.js')}}"></script> 
 
 <!-- Morris JavaScript --> 
-<script src="dist/plugins/raphael/raphael-min.js"></script> 
-<script src="dist/plugins/morris/morris.js"></script> 
-<script src="dist/plugins/functions/dashboard1.js"></script> 
+<script src="{{asset('dist/plugins/raphael/raphael-min.js')}}"></script> 
+<script src="{{asset('dist/plugins/morris/morris.js')}}"></script> 
+<script src="{{asset('dist/plugins/functions/dashboard1.js')}}"></script> 
 
 <!-- for demo purposes --> 
-<script src="dist/js/demo.js"></script>
+<script src="{{asset('dist/js/demo.js')}}"></script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
