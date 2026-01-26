@@ -17,32 +17,31 @@
         <li class="active treeview"> <a href="#"> <i class="icon-home"></i> <span>Admin User</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li class="active"><a href="index.html"><i class="fa fa-angle-right"></i>List All Admin Users</a></li>
-            <li><a href="index-classic.html"><i class="fa fa-angle-right"></i> Classic</a></li>
+            <li><a href="index-classic.html"><i class="fa fa-angle-right"></i>Add Admin Users</a></li>
             
           </ul>
         </li>
         <li class="header">Modules</li>
-        <li class="treeview"> <a href="#"> <i class="icon-grid"></i> <span>Apps</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"> <i class="icon-grid"></i> <span>Companies</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="apps-calendar.html"><i class="fa fa-angle-right"></i> Calendar</a></li>
-            <li><a href="apps-support-ticket.html"><i class="fa fa-angle-right"></i> Support Ticket</a></li>
+            <li><a href="{{url('admin/company')}}"><i class="fa fa-angle-right"></i> Companies List </a></li>
+            <li><a href="apps-support-ticket.html"><i class="fa fa-angle-right"></i> Add New Company</a></li>
             <li><a href="apps-contacts.html"><i class="fa fa-angle-right"></i> Contact / Employee</a></li>
-            <li><a href="apps-contact-grid.html"><i class="fa fa-angle-right"></i> Contact  Grid</a></li>
-            <li><a href="apps-contact-details.html"><i class="fa fa-angle-right"></i> Contact Detail</a></li>
+
           </ul>
         </li>
         <li class="treeview"> <a href="#"> <i class="ti-email"></i> <span> Jobs</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('jobcategory.index')}}"><i class="fa fa-angle-right"></i> All Category </a></li>
-            <li><a href=""><i class="fa fa-angle-right"></i> Add Category</a></li>
-            <li><a href="apps-compose-mail.html"><i class="fa fa-angle-right"></i> Compose Mail</a></li>
+            <li><a href="{{route('jobcategory.index')}}"><i class="fa fa-angle-right"></i>Job  List </a></li>
+            <li><a href="{{route('jobcategory.create')}}"><i class="fa fa-angle-right"></i>Import Job</a></li>
+            <li><a href="apps-compose-mail.html"><i class="fa fa-angle-right"></i>Add job</a></li>
           </ul>
         </li>
         
-        <li class="treeview"> <a href="#"> <i class="icon-action-redo"></i> <span>Multilevel</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"> <i class="icon-action-redo"></i> <span>User  Profiles</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-angle-right"></i> Level One</a></li>
-            <li class="treeview"> <a href="#"><i class="fa fa-angle-right"></i> Level One <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+            <li><a href="#"><i class="fa fa-angle-right"></i>User Profiles List</a></li>
+            <li class="treeview"> <a href="#"><i class="fa fa-angle-right"></i>Add User Profiles  <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
               <ul class="treeview-menu">
                 <li><a href="#"><i class="fa fa-angle-right"></i> Level Two</a></li>
                 <li class="treeview"> <a href="#" ><i class="fa fa-angle-right"></i> Level Two <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>

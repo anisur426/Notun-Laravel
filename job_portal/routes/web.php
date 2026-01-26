@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\JobCategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -33,23 +34,24 @@ Route::middleware('auth')->group(function () {
 
 #######admin login,register,logout#######
 
-Route::middleware('guest:admin')->prefix('admin')->group( function () {
+Route::middleware('guest:admin')->prefix('admin')->group(function () {
 
     Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'create'])->name('admin.login');
     Route::post('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'store']);
 
-   // Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('admin.register');
+    // Route::get('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'create'])->name('admin.register');
     //Route::post('register', [App\Http\Controllers\Auth\Admin\RegisterController::class, 'store']);
 
 });
 
-Route::middleware('auth:admin')->prefix('admin')->group( function () {
+Route::middleware('auth:admin')->prefix('admin')->group(function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'destroy'])->name('admin.logout');
 
-    Route::view('/dashboard','backend.admin_dashboard');
-Route::resource('jobcategory', JobCategoryController::class);
+    Route::view('/dashboard', 'backend.admin_dashboard');
 
+    Route::resource('jobcategory', JobCategoryController::class);
+    Route::resource('company', CompanyController::class);
 });
 
 
@@ -62,8 +64,15 @@ Route::middleware('guest:employe')->prefix('employe')->group(function () {
 
 Route::middleware('auth:employe')->prefix('employe')->group(function () {
     Route::post('logout', [App\Http\Controllers\Auth\Employe\LoginController::class, 'destroy'])->name('employe.logout');
-    Route::view('/dashboard','backend.employe_dashboard'); // এখানে /dashboard -> dashboard
+    Route::view('/dashboard', 'backend.employe_dashboard');
+    Route::resource('company', CompanyController::class); // এখানে /dashboard -> dashboard
 });
 
+// Route::middleware('auth:admin')->group(function () {
+    
+// });
 
-require __DIR__.'/auth.php';
+
+
+
+require __DIR__ . '/auth.php';

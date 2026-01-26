@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class JobCategory extends Model
 {
     use HasFactory;
-  protected $table = 'job'; // <-- তোমার database table name
-    protected $fillable = ['name','description']; // যেই columnগুলো আছে
+
+    protected $table = 'job_categories'; // ✅ ঠিক টেবিল নাম
+    protected $fillable = ['name', 'description'];
 }
-
-
