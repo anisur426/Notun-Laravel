@@ -10,10 +10,13 @@ class JobCategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return view('backend.category.index');
-    }
+public function index()
+{ 
+
+       $categories = JobCategory::all();
+       //dd($categories);
+    return view('backend.jobcategory.index', compact('categories'));
+}
 
     /**
      * Show the form for creating a new resource.
