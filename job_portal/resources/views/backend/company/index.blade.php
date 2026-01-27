@@ -43,18 +43,27 @@
 <div class="content-wrapper"> 
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-      <h1>Basic Tables</h1>
+      <h1>Company Table</h1>
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li><i class="fa fa-angle-right"></i> <a href="#">Tables</a></li>
-        <li><i class="fa fa-angle-right"></i> Basic Tables</li>
+        <li><i class="fa fa-angle-right"></i> Company Table</li>
       </ol>
     </div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-end">
+            <a href="" class="btn btn-primary">Add Company</a>
+        </div>
+    </div>
+</div>
+
 <div class="content">
     <div class="card">
         <div class="card-body">
-            <h4 class="text-black">Basic Table</h4>
-            <p>Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>.</p>
+           
+            <h4 class="text-black">Company Table</h4>
+         
             <div class="table-responsive">
                 <table class="table">
                     <thead>
