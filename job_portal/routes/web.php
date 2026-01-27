@@ -52,6 +52,8 @@ Route::middleware('auth:admin')->prefix('admin')->group(function () {
 
     Route::resource('jobcategory', JobCategoryController::class);
     Route::resource('company', CompanyController::class);
+   
+
 });
 
 

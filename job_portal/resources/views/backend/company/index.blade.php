@@ -50,19 +50,13 @@
         <li><i class="fa fa-angle-right"></i> Company Table</li>
       </ol>
     </div>
-<div class="row">
-    <div class="col-md-12">
-        <div class="d-flex justify-content-end">
-            <a href="" class="btn btn-primary">Add Company</a>
-        </div>
-    </div>
-</div>
+
 
 <div class="content">
     <div class="card">
         <div class="card-body">
            
-            <h4 class="text-black">Company Table</h4>
+            <h4 class="text-black">Company Table <span class="float-right"><a href="{{url('admin/company/create')}}" class="btn btn-primary">Add Company</a></span></h4>
          
             <div class="table-responsive">
                 <table class="table">

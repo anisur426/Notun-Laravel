@@ -15,13 +15,14 @@ class CompanyController extends Controller
         $coms = Company::all();
         return view('backend.company.index', compact('coms'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+         return view('backend.company.create');
     }
 
     /**

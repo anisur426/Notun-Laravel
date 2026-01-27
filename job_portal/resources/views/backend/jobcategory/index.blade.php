@@ -1,3 +1,5 @@
+
+
 @extends("backend.layout.master")
 @section("head")
 <head>
@@ -38,69 +40,53 @@
 @endsection
 
 @section('content')
-   <div class="content-wrapper"> 
+<div class="content-wrapper"> 
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-      <h1>Basic Tables</h1>
+      <h1>Company Table</h1>
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li><i class="fa fa-angle-right"></i> <a href="#">Tables</a></li>
-        <li><i class="fa fa-angle-right"></i> Basic Tables</li>
+        <li><i class="fa fa-angle-right"></i> Company Table</li>
       </ol>
     </div>
-  
-    
-    <!-- Main content -->
-    <div class="content">
-      <div class="card">
-      <div class="card-body">
-       @if (session('success'))
-        <div class="alert alert-success">{{session('success')}}</div>
-        @endif
-      <h4 class="text-black">Job list <span class="pull-right"><a class="btn btn-primary" href="{{route('jobcategory.create')}}">Add JobCategory</a></span></h4>
-      <div class="table-responsive">
-        <table class="table">
 
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">name</th>
-            <th scope="col">description</th>
-            <th scope="col">Action</th>
-         </tr>
-        </thead>
-        <tbody>
-          @foreach($categories as $item)
-          <tr>
-            <form action="{{route('jobcategory.destroy',$item->id)}}" method="post">
-              @csrf
-              @method('delete')
-                 <th scope="row">{{$item->id}}</th>
-                 <td>{{$item->name}}</td>
-                 <td>{{$item->description}}</td>
-                 <td>
-                   <a href="{{route('job.edit',$item->id)}}" class="btn btn-primary">Edit</a>
-                   <button type="submit" class="btn btn-danger">Delete</button>
-                 </td>
-               
 
-            </form>
+<div class="content">
+    <div class="card">
+        <div class="card-body">
+           
+            <h4 class="text-black">Company Table <span class="float-right"><a href="{{url('admin/company/create')}}" class="btn btn-primary">Add Company</a></span></h4>
          
-          </tr>
-          @endforeach
-
-        </tbody>
-
-        </table>
-
-      </div>
-
-       
-      </div></div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{-- @foreach($coms as $com) --}}
+                        {{-- <tr>
+                            <th scope="row">{{$com->id}}</th>
+                            <td>{{$com->name}}</td>
+                            <td>{{$com->email}}</td>
+                            <td>{{$com->address}}</td>
+                            <td>{{$com->status}}</td>
+                            <td></td>
+                        </tr> --}}
+                        {{-- @endforeach --}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <!-- /.content --> 
-  </div>
-
+</div>
 @endsection
 @section('script')
 <script src="{{asset('dist/js/jquery.min.js')}}"></script>  
